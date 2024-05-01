@@ -1,0 +1,30 @@
+package movie;
+import java.util.Scanner;
+/**
+ *ST10445079
+ * @author L Kwinana
+ */
+public class Movie {
+
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+
+        
+        System.out.print("Enter Movie you would like to rate: ");
+        String Movie = keyboard.nextLine();
+        
+        System.out.print("What would you rate this movie out of 5: ");
+        int rating = keyboard.nextInt();
+        
+        if(rating >= 1 && rating <= 5 ){
+    
+            
+            System.out.println("You gave " + Movie + " a rating of " + rating  );
+             }
+        else {
+        System.out.println("Retry rating process, as the rating should be between 1 and 5.");
+    }
+    }
+    
+}
