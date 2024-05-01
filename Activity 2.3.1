@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class RegistrationFees {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of modules you want to register for: ");
+        int numberOfModules = scanner.nextInt();
+
+        System.out.print("Enter the price per module: ");
+        double pricePerModule = scanner.nextDouble();
+
+        double totalRegistrationFees = calculateTotalRegistrationFees(numberOfModules, pricePerModule);
+
+        System.out.printf("The total registration fees payable is R%.2f%n", totalRegistrationFees);
+    }
+
+    private static double calculateTotalRegistrationFees(int numberOfModules, double pricePerModule) {
+        return numberOfModules * pricePerModule;
+    }
+
+}
